@@ -1,0 +1,28 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "start": "PROXY_PORT=8086 node main.js"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hslayers/proxy.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "BOSC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hslayers/proxy/issues"
+  },
+  "homepage": "https://github.com/hslayers/proxy#readme",
+  "dependencies": {
+    "cors-anywhere": "^0.4.1"
+  }
+}
