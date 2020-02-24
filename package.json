@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"No build necessary\"",
-    "start": "PROXY_PORT=8086 node main.js"
+    "start": "PROXY_PORT=8085 node main.js"
   },
   
   "repository": {
