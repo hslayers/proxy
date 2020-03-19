@@ -16,7 +16,9 @@ require('http').createServer(function (req, res) {
   try {
     req.url = req.url.replace('/mapproxy', '');
     if (req.url.indexOf('/search') > -1) {
+      console.log('Start', req.url);
       const params = querystring.decode(req.url.split('?')[1]);
+      console.log('Start', params);
       if (typeof params.provider == 'undefined' || params.provider == 'geonames')
         req.url = `/http://api.geonames.org/searchJSON?name_startsWith=${encodeURIComponent(params.q)}&username=${geonamesUsername}`
     }
