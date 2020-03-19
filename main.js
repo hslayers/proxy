@@ -14,11 +14,12 @@ const geonamesUsername = 'raitis';
 
 require('http').createServer(function (req, res) {
   try {
+    console.log('Start', req);
     req.url = req.url.replace('/mapproxy', '');
     if (req.url.indexOf('/search') > -1) {
-      console.log('Start', req.url);
+      console.log('Search', req.url);
       const params = querystring.decode(req.url.split('?')[1]);
-      console.log('Start', params);
+      console.log('Params', params);
       if (typeof params.provider == 'undefined' || params.provider == 'geonames')
         req.url = `/http://api.geonames.org/searchJSON?name_startsWith=${encodeURIComponent(params.q)}&username=${geonamesUsername}`
     }
