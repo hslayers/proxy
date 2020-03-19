@@ -14,7 +14,7 @@ const geonamesUsername = 'raitis';
 
 require('http').createServer(function (req, res) {
   try {
-    console.log('Start', req);
+    console.log('Start', req.url);
     req.url = req.url.replace('/mapproxy', '');
     if (req.url.indexOf('/search') > -1) {
       console.log('Search', req.url);
